@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -22,25 +23,45 @@
         android:layout_margin="@dimen/main_margin"
         android:text="@string/calories"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/summary" />
+        app:layout_constraintTop_toBottomOf="@id/top_divider" />
 
     <TextView
         android:id="@+id/total_cal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/main_margin"
-        android:text="2200 kcal"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toStartOf="@id/cal_separator"
+        app:layout_constraintTop_toTopOf="@id/total_cal_text"
+        tools:text="2200" />
+
+    <TextView
+        android:id="@+id/cal_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:text="@string/separator"
         app:layout_constraintEnd_toStartOf="@id/eaten_cal"
-        app:layout_constraintTop_toBottomOf="@id/summary" />
+        app:layout_constraintTop_toTopOf="@id/total_cal" />
+
+    <TextView
+        android:id="@+id/kcal_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kcal"
+        app:layout_constraintEnd_toEndOf="@id/cal_indicator"
+        app:layout_constraintTop_toTopOf="@id/eaten_cal" />
+
 
     <TextView
         android:id="@+id/eaten_cal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/main_margin"
-        android:text="2200 kcal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/summary" />
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toStartOf="@id/kcal_text"
+        app:layout_constraintTop_toTopOf="@id/cal_separator"
+        tools:text="1100" />
 
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -64,19 +85,38 @@
         android:id="@+id/total_carbs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/main_margin"
-        android:text="200 g"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toStartOf="@id/carbs_separator"
+        app:layout_constraintTop_toTopOf="@id/total_carbs_text"
+        tools:text="200" />
+
+    <TextView
+        android:id="@+id/carbs_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:text="@string/separator"
         app:layout_constraintEnd_toStartOf="@id/eaten_carbs"
-        app:layout_constraintTop_toBottomOf="@id/cal_indicator" />
+        app:layout_constraintTop_toTopOf="@id/total_carbs" />
 
     <TextView
         android:id="@+id/eaten_carbs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/main_margin"
-        android:text="100 g"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cal_indicator" />
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toStartOf="@id/carbs_text"
+        app:layout_constraintTop_toTopOf="@id/carbs_separator"
+        tools:text="100" />
+
+    <TextView
+        android:id="@+id/carbs_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gramm"
+        app:layout_constraintEnd_toEndOf="@id/carbs_indicator"
+        app:layout_constraintTop_toTopOf="@id/eaten_carbs" />
 
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -100,19 +140,38 @@
         android:id="@+id/total_protein"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/main_margin"
-        android:text="200 g"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toStartOf="@id/protein_separator"
+        app:layout_constraintTop_toTopOf="@id/total_protein_text"
+        tools:text="200" />
+
+    <TextView
+        android:id="@+id/protein_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:text="@string/separator"
         app:layout_constraintEnd_toStartOf="@id/eaten_protein"
-        app:layout_constraintTop_toBottomOf="@id/carbs_indicator" />
+        app:layout_constraintTop_toTopOf="@id/total_protein" />
 
     <TextView
         android:id="@+id/eaten_protein"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/main_margin"
-        android:text="100 g"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/carbs_indicator" />
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toStartOf="@id/protein_text"
+        app:layout_constraintTop_toTopOf="@id/protein_separator"
+        tools:text="100" />
+
+    <TextView
+        android:id="@+id/protein_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gramm"
+        app:layout_constraintEnd_toEndOf="@id/protein_indicator"
+        app:layout_constraintTop_toTopOf="@id/eaten_protein" />
 
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -136,19 +195,38 @@
         android:id="@+id/total_fat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/main_margin"
-        android:text="200 g"
-        app:layout_constraintEnd_toStartOf="@id/eaten_protein"
-        app:layout_constraintTop_toBottomOf="@id/protein_indicator" />
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toStartOf="@id/fat_separator"
+        app:layout_constraintTop_toTopOf="@id/total_fat_text"
+        tools:text="100" />
+
+    <TextView
+        android:id="@+id/fat_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:text="@string/separator"
+        app:layout_constraintEnd_toStartOf="@id/eaten_fat"
+        app:layout_constraintTop_toTopOf="@id/total_fat" />
 
     <TextView
         android:id="@+id/eaten_fat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/main_margin"
-        android:text="100 g"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/protein_indicator" />
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toStartOf="@id/fat_text"
+        app:layout_constraintTop_toTopOf="@id/fat_separator"
+        tools:text="74" />
+
+    <TextView
+        android:id="@+id/fat_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gramm"
+        app:layout_constraintEnd_toEndOf="@id/fat_indicator"
+        app:layout_constraintTop_toTopOf="@id/eaten_fat" />
 
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -165,16 +243,45 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/main_margin"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fat_indicator" />
+        app:layout_constraintTop_toBottomOf="@id/middle_divider" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/food_add_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/main_margin"
+        android:contentDescription="@string/add_food_button"
         android:src="@drawable/ic_food_add_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+
+    <View
+        android:id="@+id/middle_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="@dimen/main_margin"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fat_indicator" />
+
+    <View
+        android:id="@+id/top_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="@dimen/main_margin"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/summary" />
+
+
+    <View
+        android:id="@+id/bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="@dimen/main_margin"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/food_list" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
