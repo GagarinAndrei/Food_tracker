@@ -243,7 +243,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/main_margin"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/middle_divider" />
+        app:layout_constraintTop_toBottomOf="@id/middle_divider"
+        tools:listitem="@layout/food_short_info" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/food_add_button"
