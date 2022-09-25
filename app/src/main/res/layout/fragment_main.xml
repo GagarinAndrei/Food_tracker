@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:text="@string/summary"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/total_cal_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:text="@string/calories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/summary" />
+
+    <TextView
+        android:id="@+id/total_cal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:text="2200 kcal"
+        app:layout_constraintEnd_toStartOf="@id/eaten_cal"
+        app:layout_constraintTop_toBottomOf="@id/summary" />
+
+    <TextView
+        android:id="@+id/eaten_cal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:text="2200 kcal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/summary" />
+
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/cal_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/total_cal_text" />
+
+    <TextView
+        android:id="@+id/total_carbs_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:text="@string/carbs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cal_indicator" />
+
+    <TextView
+        android:id="@+id/total_carbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:text="200 g"
+        app:layout_constraintEnd_toStartOf="@id/eaten_carbs"
+        app:layout_constraintTop_toBottomOf="@id/cal_indicator" />
+
+    <TextView
+        android:id="@+id/eaten_carbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:text="100 g"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cal_indicator" />
+
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/carbs_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/total_carbs_text" />
+
+    <TextView
+        android:id="@+id/total_protein_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:text="@string/protein"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carbs_indicator" />
+
+    <TextView
+        android:id="@+id/total_protein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:text="200 g"
+        app:layout_constraintEnd_toStartOf="@id/eaten_protein"
+        app:layout_constraintTop_toBottomOf="@id/carbs_indicator" />
+
+    <TextView
+        android:id="@+id/eaten_protein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:text="100 g"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carbs_indicator" />
+
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/protein_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/total_protein_text" />
+
+    <TextView
+        android:id="@+id/total_fat_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:text="@string/fat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/protein_indicator" />
+
+    <TextView
+        android:id="@+id/total_fat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:text="200 g"
+        app:layout_constraintEnd_toStartOf="@id/eaten_protein"
+        app:layout_constraintTop_toBottomOf="@id/protein_indicator" />
+
+    <TextView
+        android:id="@+id/eaten_fat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:text="100 g"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/protein_indicator" />
+
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/fat_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/total_fat_text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/food_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fat_indicator" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/food_add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:src="@drawable/ic_food_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
