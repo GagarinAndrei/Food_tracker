@@ -134,5 +134,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/food_fat_value" />
 
+    <EditText
+        android:id="@+id/food_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:hint="Enter the amoung of food"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/food_fat" />
+
+    <TextView
+        android:id="@+id/food_value_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:text="@string/gramm"
+        app:layout_constraintStart_toEndOf="@id/food_value"
+        app:layout_constraintTop_toTopOf="@id/food_value" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_food_add_24"
+        android:text="@string/save"
+        app:layout_constraintTop_toBottomOf="@id/food_value"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/main_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
