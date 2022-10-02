@@ -10,6 +10,8 @@
     <string name="separator">/</string>
     <string name="kcal">kcal</string>
     <string name="zero">0</string>
-    <string name="gramm">g</string>
+    <string name="gram">g</string>
     <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="remove">Remove</string>
 </resources>

@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/main_margin"
-        android:text="@string/gramm"
+        android:text="@string/gram"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/food_carbs_value" />
 
@@ -103,7 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/main_margin"
-        android:text="@string/gramm"
+        android:text="@string/gram"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/food_protein_value" />
 
@@ -130,7 +130,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/main_margin"
-        android:text="@string/gramm"
+        android:text="@string/gram"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/food_fat_value" />
 
@@ -149,7 +149,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/main_margin"
-        android:text="@string/gramm"
+        android:text="@string/gram"
         app:layout_constraintStart_toEndOf="@id/food_value"
         app:layout_constraintTop_toTopOf="@id/food_value" />
 

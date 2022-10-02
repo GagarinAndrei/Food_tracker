@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_main">
+    android:id="@+id/nav_main"
+    app:startDestination="@id/mainScreenFragment">
 
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="ru.gagarin.foodtracker.MainScreenFragment"
+        android:label="MainScreenFragment" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_foodDetailsFragment"
+            app:destination="@id/foodDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodDetailsFragment"
+        android:name="ru.gagarin.foodtracker.FoodDetailsFragment"
+        android:label="FoodDetailsFragment" >
+        <action
+            android:id="@+id/action_foodDetailsFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
 </navigation>

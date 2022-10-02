@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_fragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".MainScreenFragment">
 
     <TextView
         android:id="@+id/summary"
@@ -114,7 +116,7 @@
         android:id="@+id/carbs_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/gramm"
+        android:text="@string/gram"
         app:layout_constraintEnd_toEndOf="@id/carbs_indicator"
         app:layout_constraintTop_toTopOf="@id/eaten_carbs" />
 
@@ -169,7 +171,7 @@
         android:id="@+id/protein_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/gramm"
+        android:text="@string/gram"
         app:layout_constraintEnd_toEndOf="@id/protein_indicator"
         app:layout_constraintTop_toTopOf="@id/eaten_protein" />
 
@@ -224,7 +226,7 @@
         android:id="@+id/fat_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/gramm"
+        android:text="@string/gram"
         app:layout_constraintEnd_toEndOf="@id/fat_indicator"
         app:layout_constraintTop_toTopOf="@id/eaten_fat" />
 
