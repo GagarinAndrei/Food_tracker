@@ -14,4 +14,5 @@
     <string name="save">Save</string>
     <string name="edit">Edit</string>
     <string name="remove">Remove</string>
+    <string name="enter_food_name">Enter food name</string>
 </resources>

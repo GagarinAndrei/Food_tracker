@@ -1,4 +1,4 @@
-package ru.gagarin.foodtracker
+package ru.gagarin.foodtracker.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import ru.gagarin.foodtracker.Food
+import ru.gagarin.foodtracker.R
 import ru.gagarin.foodtracker.databinding.FragmentMainScreenBinding
 
 
@@ -24,11 +26,11 @@ class MainScreenFragment : Fragment() {
         val binding = FragmentMainScreenBinding.inflate(inflater, container, false)
         val adapter = FoodAdapter(object : OnInteractionListener {
             override fun onEditClicked(food: Food) {
-                viewModel.edit(food)
+                viewModel.editFood(food)
             }
 
             override fun onDeleteClicked(food: Food) {
-                viewModel.removeById(food.id)
+                viewModel.removeFoodById(food.id)
             }
         })
         binding.foodList.adapter = adapter

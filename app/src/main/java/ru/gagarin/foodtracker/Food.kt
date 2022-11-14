@@ -5,11 +5,11 @@ import java.time.LocalDateTime
 data class Food(
     val id: Int,
     val name: String,
-    val calories: Int,
-    val carbs: Int,
-    val protein: Int,
-    val fat: Int,
-    val date: LocalDateTime
+    val calories: String,
+    val carbs: String,
+    val protein: String,
+    val fat: String,
+//    val date: LocalDateTime
 ) {
 
 }

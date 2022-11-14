@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/food_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Some food name" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/food_calories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
         app:layout_constraintTop_toTopOf="@id/food_name"
         tools:text="233" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/kcal_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,9 +35,9 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/menu_button"
+        style="@style/Widget.AppTheme.IconButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/Widget.AppTheme.IconButton"
         app:icon="@drawable/ic_food_option_menu_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

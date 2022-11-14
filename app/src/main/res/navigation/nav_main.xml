@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/mainScreenFragment"
-        android:name="ru.gagarin.foodtracker.MainScreenFragment"
+        android:name="ru.gagarin.foodtracker.presentation.MainScreenFragment"
         android:label="MainScreenFragment" >
         <action
             android:id="@+id/action_mainScreenFragment_to_foodDetailsFragment"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/foodDetailsFragment"
-        android:name="ru.gagarin.foodtracker.FoodDetailsFragment"
+        android:name="ru.gagarin.foodtracker.presentation.FoodDetailsFragment"
         android:label="FoodDetailsFragment" >
         <action
             android:id="@+id/action_foodDetailsFragment_to_mainScreenFragment"
